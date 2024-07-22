@@ -72,7 +72,7 @@ query BestSellers(
 $country: CountryCode
 $language: LanguageCode
 ) @inContext(country: $country, language: $language) {
-bestSellers: collection(handle: "bestsellers") {
+bestSellers: collection(handle: "best-sellers") {
   id
   handle
   title
