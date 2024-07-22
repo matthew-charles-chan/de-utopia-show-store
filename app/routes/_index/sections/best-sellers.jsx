@@ -26,7 +26,6 @@ export default function BestSellers() {
       <Container>
         <div className='recommended-products'>
           <CollectionHeading {...collectionHeading} />
-
           <Suspense fallback={<div>Loading...</div>}>
             <Await resolve={products}>
               {(products) => (
@@ -45,7 +44,6 @@ export default function BestSellers() {
                           sizes='(min-width: 45em) 20vw, 50vw'
                         />
                       </div>
-
                       <h3 className='font-semibold text-lg pt-4'>
                         {product.vendor}
                       </h3>
@@ -99,7 +97,7 @@ function CollectionHeading({
   return (
     <>
       <h2 className='text-3xl font-bold uppercase'>
-        Best Sellers
+        TRENDING PRODUCTS
       </h2>
       <div>
         <Link
