@@ -22,7 +22,7 @@ export async function loader({ context: { storefront } }) {
     BEST_SELLERS_QUERY,
   )
 
-  return json({ bestSellers })
+  return json({ products: bestSellers.products.nodes })
 }
 
 export default function Homepage() {
@@ -72,36 +72,30 @@ query BestSellers(
 $country: CountryCode
 $language: LanguageCode
 ) @inContext(country: $country, language: $language) {
-bestSellers: collection(handle: "best-sellers") {
+bestSellers: collection(handle: "bestsellers") {
   id
   handle
   title
   description
   products(
-    first: 6
+    first: 5
   ) {
-    nodes {
-      id
+      nodes {
+        id
+      vendor
       title
       handle
-      variants (first: 1) {
+      onlineStoreUrl
+      priceRange {
+        minVariantPrice {
+          amount
+          currencyCode
+        }
+      }
+      images(first: 1) {
         nodes {
-          availableForSale
-          price {
-            amount
-            currencyCode
-          }
-          compareAtPrice {
-            amount
-            currencyCode
-          }
-          image {
-            id
-            altText
-            height
-            width
-            url
-          }
+          id
+          url
         }
       }
     }
