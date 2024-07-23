@@ -40,7 +40,7 @@ export default function Collections() {
             font='display'
             className='drop-shadow-[-0.1em_0_0_white]'
           >
-            For Everyone
+            For Everyone!
           </Span>
         </Heading>
       </Row>
