@@ -24,7 +24,7 @@ export var storyboard = (
         position: 'absolute',
         width: 1440,
         height: 'max-content',
-        left: -100,
+        left: 106,
         top: -225,
         overflow: 'hidden',
       }}
