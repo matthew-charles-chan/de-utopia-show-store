@@ -97,7 +97,7 @@ function CollectionHeading({
   return (
     <>
       <h2 className='text-3xl font-bold uppercase'>
-        TRENDING PRODUCTS
+        POPULAR PRODUCTS
       </h2>
       <div>
         <Link
