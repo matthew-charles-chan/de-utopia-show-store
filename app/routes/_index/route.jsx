@@ -31,7 +31,10 @@ export default function Homepage() {
   return (
     <Column>
       <Hero />
-      <BestSellers style={{ width: 1312, height: 940 }} />
+      <BestSellers
+        style={{ width: 1312, height: 940, opacity: '00%' }}
+      />
+
       <Collections />
       <FeaturedProducts />
       <OurPromise />

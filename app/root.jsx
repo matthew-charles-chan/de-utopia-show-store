@@ -30,7 +30,7 @@ export const shouldRevalidate = ({
   if (formMethod && formMethod !== 'GET') {
     return true
   }
-
+  <BestSellers style={{ width: 1312, height: 940 }} />
   // revalidate when manually revalidating via useRevalidator
   if (currentUrl.toString() === nextUrl.toString()) {
     return true
